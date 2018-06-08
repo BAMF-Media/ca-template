@@ -7,6 +7,8 @@
 
 
 +media-breakpoint-down(lg)
+
+
   .adviseFluid
     .salesRot
       height: 400px
@@ -15,6 +17,11 @@
       margin-left: 130px
       padding-top: 50px
 
+  .servisesFluid
+    .servisesContainer
+      .yellowButton
+        padding: 10px 34px
+
   .aboutFluid
     .aboutContainer
       article
@@ -22,6 +29,9 @@
 
       .text
         padding: 0 20px
+
+      .yellowButton
+        padding: 10px 34px
 
   .joinFluid
     .joinContainer
@@ -42,13 +52,13 @@
 
 +media-breakpoint-down(md)
   .headNav
-    position: absolute
+
     background: $white
     top: 0
     left: 0
     width: 100%
     height: 80px
-    padding: 0 50px
+    padding: 0 20px
     .leftHeader
       .logo
         img
@@ -87,6 +97,7 @@
         margin-top: 80px
         li
           margin-right: 0
+          margin-left: 0
         .terms_cond
           display: block
         .separator
@@ -108,6 +119,18 @@
   .topSection
     padding-top: 80px
 
+
+
+  .companiesFLuid
+    .companiesContainer
+      .companiesList
+        li
+          margin: 0 15px
+          img
+            height: 18px
+
+  .topSection
+    background-position-y: -20px
   .NYFluid
     .NYContainer
       .h3
@@ -126,7 +149,9 @@
     .adviseContainer
       .h2
         padding-left: 0
-        
+        font-size: 46px
+        max-width: 500px
+
       .subtitle
         text-align: left
         font-size: 28px
@@ -209,8 +234,19 @@
   .text
     font-size: 20px
 
+  .companiesFLuid
+    .companiesContainer
+      .companiesList
+        flex-direction: column
+        li
+          margin: 10px 0
+          img
+            height: 20px
+
+
   .topSection
     min-height: 0
+    padding-top: 30px
   .NYFluid
     min-height: 450px
     .NYContainer

@@ -57,12 +57,13 @@ body
   color: $white
   text-transform: uppercase
   font-weight: 700
-  font-size: 26px
+  font-size: 24px
   display: inline-flex
   justify-content: center
   align-items: center
   height: 50px
   border: none
+  border-radius: 0
 
   cursor: pointer
 
@@ -94,7 +95,7 @@ body
 
 .subtitle
   font-family: $Abl
-  font-weight: 500
+  font-weight: 400
   color: rgb(4,108,143)
   font-size: 34px
   padding-left: 50px
@@ -122,6 +123,7 @@ body
     text-transform: uppercase
     background: rgb(236,236,236)
 
+
     &::placeholder
       text-transform: uppercase
 
@@ -145,6 +147,7 @@ body
   align-content: center
   justify-content: space-between
   z-index: 20
+  padding: 0 25px
 
   .leftHeader
     align-self: center
@@ -167,8 +170,8 @@ body
         margin-bottom: 0
         padding-left: 0
         li
-          margin-right: 15px
-          margin-left: 15px
+
+          margin-left: 30px
           list-style: none
 
           a
@@ -194,22 +197,26 @@ body
     .companiesList
       display: flex
       flex-direction: row
-      justify-content: space-around
+      justify-content: center
       align-items: center
       padding-left: 0
       margin-bottom: 0
+      flex-wrap: wrap
 
       li
         list-style: none
         text-align: center
-        margin: 0 20px
+        margin: 0 30px
+
+
 
       a
+        &:active, &:focus
+          outline: none
+        img
+          height: 22px
+          margin: 0 auto
 
-
-      img
-        height: 22px
-        margin: 0 auto
 
 .topSection
   background: rgb(247, 247, 247) url("../img/Top/topBgAll.png") no-repeat center top
@@ -220,7 +227,8 @@ body
   background-size: cover
   min-height: 550px
   .topSearch
-    margin-top: 80px
+    margin: 80px auto 0
+    width: 80%
   .keyWord
     border-radius: 0
     color: black
@@ -228,6 +236,7 @@ body
     font-size: 16px
     text-transform: none
     width: 75%
+    border-radius: 0
 
     &::placeholder
       color: rgb(179,179,179)
@@ -257,15 +266,18 @@ body
     .h2
       color: rgb(79,79,79)
       text-align: left
-      max-width: 500px
-      padding-left: 50px
+      max-width: 550px
+      font-size: 56px
+
+
     .subtitle
       padding-left: 0
-      margin-top: 50px
+      margin-top: 60px
 
     .text
       padding-left: 0
       width: 108%
+      margin-top: 20px
 
 .quoteFluid
   padding-top: 150px
@@ -323,10 +335,8 @@ body
       text-align: right
 
     .yellowButton
-      display: inline-block
-      text-align: right
-      padding: 10px 20px
-      line-height: 1.2
+      //display: inline-block
+      padding: 10px 40px
 
   .rightImgWrap
     position: absolute
@@ -369,7 +379,7 @@ body
 
 
     .yellowButton
-      padding: 10px 20px
+      padding: 10px 40px
 
 
 .joinFluid
@@ -382,8 +392,8 @@ body
     .btnWrap
       text-align: center
     .yellowButton
-      font-size: 40px
-      padding: 0px 30px
+      font-size: 41px
+      padding: 8px 50px
       height: auto
       margin: auto
 
@@ -424,14 +434,15 @@ body
 
 
 
-    .logo
 
+    .linksList
+      margin-bottom: 0
     li
       list-style: none
 
       a
         font-family: $Abl
-        font-weight: 500
+        //font-weight: 500
         color: rgb(31,31,31)
         font-size: 24px
         border-bottom: 2px solid transparent
