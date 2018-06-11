@@ -27,6 +27,50 @@ body
       border-color: red
     &:required:valid
       border-color: green
+.rotWrap
+  overflow: hidden
+  .shadowWrap
+    position: absolute
+    top: 81px
+    left: -5%
+    z-index: 2
+    width: 110%
+
+    .shadow
+      margin: auto
+      position: relative
+      height: 50px
+      transform: rotate($angle)
+      background: rgba(247, 146, 53, 0.7)
+      z-index: 1
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        height: 50px
+        background: rgba(247, 146, 53, 0.7)
+      //&:before
+      //  content: ''
+      //  display: block
+      //  position: absolute
+      //  width: 100%
+      //  height: 50px
+      //  background: rgba(247, 146, 53, 0.7)
+
+.rotadedl
+  transform: rotate($angle)
+
+  position: relative
+  z-index: 1
+  overflow: hidden
+  left: -100px
+  top: 100px
+  padding-left: 50px
+  width: 115%
+  .rotatedr
+    transform: rotate(-$angle)
+
 
 .img-responsive
   display: block
@@ -64,8 +108,9 @@ body
   height: 50px
   border: none
   border-radius: 0
-
   cursor: pointer
+  
+  
 
 .hoverScale
   transition: transform 0.3s
@@ -218,14 +263,14 @@ body
           margin: 0 auto
 
 
-.topSection
-  background: rgb(247, 247, 247) url("../img/Top/topBgAll.png") no-repeat center top
-  background-size: cover
-  min-height: 1200px
 
 .NYFluid
   background-size: cover
-  min-height: 550px
+  min-height: 575px
+  background: url("../img/top/topBgNew.png") no-repeat center
+  background-size: cover
+  position: relative
+
   .topSearch
     margin: 80px auto 0
     width: 80%
@@ -253,16 +298,41 @@ body
   .NYContainer
     .h2
       margin-top: 80px
+      padding: 0 20px
 
     .h3
       margin-top: 20px
 
+
+
 .adviseFluid
-  padding-top: 200px
-  padding-bottom: 120px
-  position: relative
+  padding: 0
+  //position: relative
+  //clip-path: polygon(0% 0, 100% 10%, 100% 100%, 0 100%)
+  //margin-top: -100px
+  .rotWrap
+    margin-top: -200px
+    padding-bottom: 100px
+    position: relative
+    .shadowWrap
+      top: 110px
+    .shadow
+      width: 50%
+      margin-left: auto
+      margin-right: 0
+      &:after
+        top: 0px
+        height: 20px
+  .rotadedl
+    background: $white
 
   .adviseContainer
+
+    .adviseWrap
+      padding: 70px 50px 250px 110px
+    .LAPhoto
+      min-height: 400px
+
     .h2
       color: rgb(79,79,79)
       text-align: left
@@ -276,14 +346,38 @@ body
 
     .text
       padding-left: 0
-      width: 108%
+
       margin-top: 20px
 
+    .LAPhoto
+      width: 100%
+      height: 100%
+      background: url("../img/advise/los-angeles-bg-HALF.png")
+
 .quoteFluid
-  padding-top: 150px
-  padding-bottom: 250px
-  background: url("../img/qoute/quoteBg.png") no-repeat center
-  background-size: cover
+  padding: 0
+  .rotWrap
+    min-height: 500px
+    margin-top: -175px
+    position: relative
+    .shadowWrap
+      top: 70px
+    .shadow
+      width: 100%
+      &:after
+        top: 30px
+        height: 20px
+
+
+
+
+  .rotatedr
+    background: url("../img/qoute/quoteBg.png") no-repeat center
+    background-size: cover
+    padding-top: 250px
+    padding-bottom: 150px
+    position: relative
+    top: -100px
   .quoteContainer
     blockquote
       font-family: $Ppns
@@ -314,10 +408,20 @@ body
 
 
 .servisesFluid
-  padding-top: 80px
-  padding-bottom: 70px
+  padding: 0
   position: relative
+  .rotWrap
+    margin-top: -175px
+    min-height: 500px
+  .rotadedl
+    background: $white
+
+  .rotatedr
+    padding-top: 80px
+    padding-bottom: 180px
+    background: $white
   .servisesContainer
+
     .servises
       padding-right: 50px
     .h2
@@ -333,10 +437,15 @@ body
 
     .btnWrap
       text-align: right
+      padding-bottom: 20px
 
     .yellowButton
       //display: inline-block
       padding: 10px 40px
+      background-color: $blue
+      font-size: 41px
+
+      height: auto
 
   .rightImgWrap
     position: absolute
@@ -386,7 +495,10 @@ body
   background: url("../img/Join/joinBg.png") no-repeat center top
   background-size: cover
   padding-top: 150px
-  padding-bottom: 150px
+  padding-bottom: 300px
+  position: relative
+
+
   .joinContainer
 
     .btnWrap
@@ -396,6 +508,16 @@ body
       padding: 8px 50px
       height: auto
       margin: auto
+
+  .cityLinks
+    content: ''
+    display: block
+    width: 100%
+    height: 250px
+    position: absolute
+    background: rgba($blue, 0.8)
+    left: 0
+    bottom: 0
 
     .cityList
       display: flex
@@ -424,14 +546,27 @@ body
 
 
 .footerFluid
+  .rotWrap
+    margin-top: -175px
+    min-height: 500px
+    position: relative
+    .shadowWrap
+      top: 81px
+    .shadow
+      width: 50%
+      &:after
+        top: 0px
+        height: 20px
+  .rotadedl
+    background: $white
+  .rotatedr
+    padding-top: 100px
+    padding-bottom: 30px
 
-  padding-top: 100px
-  padding-bottom: 30px
-
-
+  .footerSubmit
+    background-color: $blue
   .footerLinks
     margin-top: 70px
-
 
 
 

@@ -10,6 +10,9 @@
 
 
   .adviseFluid
+    .rotWrap
+      .shadowWrap
+        top: 102px
     .salesRot
       height: 400px
 
@@ -17,10 +20,20 @@
       margin-left: 130px
       padding-top: 50px
 
+  .adviseFluid
+    .adviseContainer
+      .adviseWrap
+        padding-right: 10px
+
   .servisesFluid
+    .rotWrap
+      margin-top: -300px
     .servisesContainer
+
       .yellowButton
         padding: 10px 34px
+        font-size: 34px
+
 
   .aboutFluid
     .aboutContainer
@@ -116,10 +129,6 @@
     padding-left: 0
     font-size: 24px
 
-  .topSection
-    padding-top: 80px
-
-
 
   .companiesFLuid
     .companiesContainer
@@ -129,9 +138,9 @@
           img
             height: 18px
 
-  .topSection
-    background-position-y: -20px
+
   .NYFluid
+    min-height: 400px
     .NYContainer
       .h3
         margin-left: 0
@@ -146,7 +155,19 @@
   .adviseFluid
     padding-top: 80px
     padding-bottom: 60px
+
+    .rotWrap
+      .shadowWrap
+        top: 98px
+
+    .rotadedl
+      width: 120%
     .adviseContainer
+
+      .adviseWrap
+        padding-right: 85px
+        padding-bottom: 50px
+
       .h2
         padding-left: 0
         font-size: 46px
@@ -166,6 +187,8 @@
   .servisesFluid
     padding-top: 60px
     padding-bottom: 60px
+    .rotatedr
+      padding-bottom: 120px
     .servisesContainer
       .h2
         text-align: center
@@ -198,7 +221,7 @@
         font-size: 26px
         padding: 0 20px
         height: 50px
-
+    .cityLinks
       .cityList
         li
           margin: 0 8px
@@ -208,6 +231,8 @@
   .quoteFluid
     padding-top: 80px
     padding-bottom: 100px
+    .rotWrap
+      margin-top: -270px
 
     .quoteContainer
       blockquote
@@ -215,6 +240,9 @@
 
 
   .footerFluid
+    .rotWrap
+      .shadowWrap
+        top: 82px
     .footerForm
       margin-top: 0px
 
@@ -222,6 +250,8 @@
 
 
 +media-breakpoint-down(sm)
+  .rotadedl
+    width: 120%
 
   .yellowButton
     font-size: 20px
@@ -244,16 +274,22 @@
             height: 20px
 
 
+
   .topSection
     min-height: 0
-    padding-top: 30px
+
   .NYFluid
-    min-height: 450px
     .NYContainer
       .topSearch
         margin-top: 50px
 
   .adviseFluid
+    .rotWrap
+      margin-top: -220px
+      .shadowWrap
+        top: 82px
+      .shadow
+        width: 100%
     .adviseContainer
       .h2
         max-width: 400px
@@ -262,6 +298,7 @@
         margin-top: 20px
 
   .servisesFluid
+    padding-bottom: 30px
     .servisesContainer
       .yellowButton
         line-height: 1.55
@@ -281,7 +318,7 @@
     .joinContainer
       .yellowButton
         font-size: 20px
-
+    .cityLinks
       .cityList
         li
           width: 140px
@@ -297,6 +334,9 @@
           left: -20px
 
   .footerFluid
+    .rotWrap
+      .shadow
+        width: 100%
     padding-top: 50px
 +media-breakpoint-down(xs)
 
@@ -328,26 +368,35 @@
         width: 100%
 
 
-  .topSection
-    padding-top: 40px
+  .rotadedl
+    width: 140%
+
 
   .NYFluid
     height: auto
     padding-bottom: 50px
-    min-height: 0px
+    min-height: 500px
     .NYContainer
       .h3
         color: $white
-      .topForm
-        margin-top: 20px
+      .topSearch
+
+        width: 100%
 
       .topSubmit
         &:hover
           width: 100%
 
   .adviseFluid
-    padding-top: 210px
+    padding-top: 90px
+    .rotWrap
+      .rotadedl
+        width: 140%
+      .shadowWrap
+        top: 84px
     .adviseContainer
+      .adviseWrap
+        padding: 80px 75px 50px 75px
       .subtitle
         font-size: 22px
         text-align: center
@@ -355,18 +404,56 @@
         max-width: 100%
         text-align: center
 
+  .quoteFluid
+
+    .rotatedr
+      padding-top: 200px
+      padding-bottom: 100px
+    .quoteContainer
+
+      blockquote
+        padding: 0 20px
+        &:before
+          left: 26px
+
 
 
   .aboutFluid
     .aboutContainer
       .subtitle
         font-size: 20px
+
+  .servisesFluid
+    padding-top: 0
+    .rotatedr
+      padding-left: 50px
+      padding-right: 50px
+
+  .joinFluid
+    .cityLinks
+      .cityList
+        justify-content: space-between
+        li
+          margin: 0
+
   .footerFluid
+    .rotWrap
+      min-height: 600px
+      margin-top: -100px
+      .shadowWrap
+        top: 16px
+    .rotadedl
+      top: 35px
+
+    .rotatedr
+      padding-left: 20px
+      padding-right: 20px
     .footerLinks
       margin-top: 40px
 
       .linksList
         margin: 10px 0 0
+        padding-left: 0 
 
       .logo
         max-width: 200px
